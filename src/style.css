@@ -196,11 +196,6 @@ input[type="text" i] {
   text-align: center;
 }
 
-.fourth-container {
-  margin-top: 10px;
-  text-align: right;
-}
-
 .third-child {
   padding: 0;
   flex: 1;
@@ -221,23 +216,18 @@ input[type="text" i] {
   margin: 0;
 }
 
-footer {
-  text-align: right;
+.fourth-container {
   margin-top: 10px;
+  text-align: right;
 }
 
 #footer-container {
-  /*   display: flex;
-  justify-content: center; /* Horizontally center the content within the container */
+  display: flex;
   align-items: center;
   display: block;
   margin: 0 auto;
   max-width: 400px;
-  margin-top: 10px;
-  background-color: #f1f1f133;
-  padding: 5px 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px 1px rgba(29, 13, 118, 0.16);
+  padding: 8px 0 0 0px;
 }
 
 #logo-footer {
