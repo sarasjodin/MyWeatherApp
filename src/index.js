@@ -154,3 +154,21 @@ spanDayTimeData.innerHTML = `${weekday} ${hour}:${minute}`;
 let actualDateInput = document.querySelector("#date-info-second");
 let spanData = document.getElementById("date-info-second");
 spanData.innerHTML = `${date} ${month} ${year}`;
+
+const sections = document.querySelectorAll(".g-sara.mylogo");
+
+sections.forEach((section) => {
+  section.addEventListener("mouseover", () => {
+    sections.forEach((s) => {
+      s.classList.add("hovered");
+      s.style.padding = "10px"; // Add padding to increase the hover area
+    });
+  });
+
+  section.addEventListener("mouseout", () => {
+    sections.forEach((s) => {
+      s.classList.remove("hovered");
+      s.style.padding = "10px";
+    });
+  });
+});
