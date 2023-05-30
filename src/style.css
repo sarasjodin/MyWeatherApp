@@ -1,3 +1,165 @@
 /* App styles */
 
-/* Form styles */
+.page-wrapper {
+  max-width: 600px;
+  margin: 0px auto;
+  padding: 20px;
+}
+
+.search-bar,
+.current-search-details,
+.forecast {
+  padding: 20px;
+}
+
+.app-container,
+.form-container,
+.about-container {
+  border: 1px solid #dadde1;
+  border-radius: 8px;
+}
+
+h1 {
+  font-size: x-large;
+}
+
+h2 {
+  font-size: medium;
+}
+
+h3 {
+  font-size: small;
+}
+
+p {
+  font-size: small;
+}
+
+#search-input {
+  width: 230px;
+  z-index: 3;
+  min-height: 30px;
+  background: #fff;
+  border: 0 solid transparent;
+  box-shadow: 0 2px 5px 1px rgba(64, 60, 67, 0.16);
+  border-radius: 24px;
+  margin: 0 auto;
+}
+
+nav,
+footer a {
+  font-size: x-small;
+}
+
+ol.breadcrumb {
+  padding-top: 7px;
+}
+
+.row {
+  --bs-gutter-x: 1.3rem;
+}
+
+header {
+  padding: 0 10px;
+}
+
+header button.btn.btn-light {
+  font-size: xx-small;
+}
+
+.larger-logo {
+  width: 40%;
+  padding-right: 15px;
+}
+
+.city {
+  font-weight: 700;
+}
+
+.current-temp-main {
+  padding: 1rem 0 1rem 1.5rem;
+}
+
+.current-temp-units {
+  position: relative;
+  font-size: 25%;
+  top: 18px;
+  vertical-align: text-top;
+}
+
+.current-temperature {
+  font-size: 425%;
+  font-weight: 600;
+  align-self: center;
+  padding: 0;
+}
+
+.current-search-details p {
+  margin-bottom: 4px;
+}
+
+.highlight {
+  font-weight: 600;
+}
+
+span.high,
+span.low {
+  font-size: smaller;
+}
+
+span.high {
+  font-weight: 600;
+}
+
+a {
+  text-decoration: none;
+}
+
+div.d-flex .btn-light {
+  margin-left: 10px;
+}
+
+.btn-light {
+  --bs-btn-bg: none;
+  --bs-btn-border-color: none;
+  --bs-btn-padding-y: 5px;
+  border-color: unset;
+  font-size: small;
+}
+
+.small-logo {
+  vertical-align: center;
+  width: 65%;
+  padding-left: 4px;
+}
+
+breadcrumb-item a {
+  color: #0d6efd; /* Set the default link color */
+}
+
+.breadcrumb-item.active a {
+  color: #0d2d4f; /* Set the active link color */
+  font-weight: bold; /* Make the active link bold */
+  text-decoration: none; /* Remove underline from active link */
+}
+
+/* Form & About styles */
+form,
+.about-container {
+  margin: 0 auto;
+  padding: 20px;
+}
+
+textarea {
+  width: 100%;
+}
+
+.about-container h2,
+.form-container h2 {
+  font-size: large;
+}
+
+.form-container h2,
+.form-container h3 {
+  padding: 10px 0 10px 0;
+}
