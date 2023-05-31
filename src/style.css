@@ -1,9 +1,17 @@
 /* App styles */
 
+body {
+  background-image: url("images/cloudsbkg.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .page-wrapper {
   max-width: 600px;
   margin: 0px auto;
   padding: 20px;
+  background-color: white;
 }
 
 .search-bar,
@@ -19,18 +27,22 @@
   border-radius: 8px;
 }
 
-.my-custom-font {
-  font-size: large;
+@media (min-width: 0) and (max-width: 449px) {
+  .my-custom-font {
+    font-size: large;
+  }
 }
 
-@media (min-width: 500px) {
+@media (min-width: 450px) and (max-width: 549px) {
   .my-custom-font {
     font-size: x-large;
   }
 }
 
-h1 {
-  font-size: x-large;
+@media (min-width: 550px) {
+  .my-custom-font {
+    font-size: xx-large;
+  }
 }
 
 h2 {
