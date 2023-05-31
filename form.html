@@ -5,143 +5,118 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Codystar&family=Lato:wght@100;300;400;700;900&display=swap"
-        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link rel="stylesheet" href="src/style.css">
-
-    <title>Sara's Feedback page</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Codystar:wght@300;400&family=Lato:wght@100;300;400;700;900&display=swap"
+        rel="stylesheet">
+    <title>Feedback page</title>
 </head>
 
 <body>
-    <div id="page-container">
+    <div class="page-wrapper">
         <header>
-            <h1>The Weather App</h1>
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-auto">
+                        <img class="logo" src="images/Climasense-01.svg" width="40" height="40" alt="The weather logo">
+                    </div>
+                    <div class="col">
+                        <h1 class="logo-text my-custom-font ">My Bootstrap Weather App</h1>
+                    </div>
+                </div>
+            </div>
+        </header>
 
-    </div>
-    <main id="app-window">
-        <form class="questionnaire-page">
-            <p class="start">What do you think about my Weather app?</p>
-
-            <label for="fruit">Select all choices that apply. <br />
-                <h2 class="formpage">Negative feedback</h2>
-            </label>
-            <input type="checkbox" id="wrong-weather" name="wrong-weather" value="NA">
-            <label for="wrong-weather">The weather is wrong</label>
+        <form class="form-container">
+            <h2>What do you think about my Weather app?</h2>
+            <p>Select all choices that apply</p>
+            <div class="row">
+                <div class="col">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="option1" name="weather-search"
+                            value="option1">
+                        <label class="form-check-label" for="option1">The weather search is not working</label>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="option2" name="page-loading"
+                            value="option2">
+                        <label class="form-check-label" for="option2">The page took too long to load</label>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="option3" name="themes" value="option3">
+                        <label class="form-check-label" for="option3">The theme buttons are not working</label>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="option4" name="conversion" value="option4">
+                        <label class="form-check-label" for="option4">The conversion to Fahrenheit or Celsius is
+                            not working</label>
+                    </div>
+                </div>
+            </div>
             <br />
-            <input type="checkbox" id="wrong-location" name="wrong-location" value="NA">
-            <label for="wrong-location">The location is wrong</label>
-            <br />
-            <input type="checkbox" id="not-useful" name="not-useful" value="NA">
-            <label for="orange">This isn't useful</label>
-            <br />
-            <input type="checkbox" id="long-loading" name="long-loading" value="NA">
-            <label for="long-loading">The page took too long to load</label>
-            <br />
-            <p class="formpage">Add your comments or suggestions below:</p>
-            <textarea class="search-city suggestions" name="comments" rows="4" cols="250"
-                placeholder="Add your comments or suggestions here"></textarea>
-
-            <br />
-            <h2 class="formpage">Positive feedback</h2>
-
-            <textarea class="search-city suggestions" name="comments" rows="4" cols="250"
-                placeholder="Add your comments or suggestions here"></textarea>
-            <br />
-            <p class="formpage">The data you provide helps me to fulfill my dream <br />- to become a skilled full-stack
-                developer.</p>
-            <br />
-            <button id="submit-btn" class="std-button" type="submit">Submit</button>
-            <button id="cancel-btn" class="std-button" type="submit">Cancel</button>
+            <div class="row">
+                <div class="mb-3">
+                    <label for="neg-feedback" class="form-label">Add other reasons and/or explain the above negative
+                        feedback:</label>
+                    <textarea class="form-control" id="neg-feedback" name="additional-feedback" rows="4"></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="pos-feedback" class="form-label">Positive feedback:</label>
+                    <textarea class="form-control" id="pos-feedback" name="positive-feedback" rows="4"></textarea>
+                </div>
+                <p>The data you provide helps me to fulfill my dream - to become a skilled
+                    full-stack
+                    developer.</p>
+                <br />
+            </div>
+            <div class="mb-3">
+                <button type="submit" id="submit-btn" class="btn btn-primary">Submit</button>
+                <button type="reset" id="cancel-btn" class="btn btn-secondary">Reset</button>
+            </div>
         </form>
-    </main>
-
-    <div id="footer-container">
-        <div id="logo-footer">
-            <h2>Coded with ❤️ by</h2>
-            <a id="logo" href="https://www.sarasjodin.com/ " target="_blank"><!-- <img
-                                src="images/Logo_sarasjodincom_svg-01.svg" alt="sarasjodin.com logo" width="auto"
-                                height="auto" /> --><svg version="1.2" baseProfile="tiny" id="Layer_1"
-                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                    viewBox="0 0 494.22 51.05" overflow="visible" xml:space="preserve">
-                    <g>
-                        <g class="sara">
-                            <path d="M35.68,33.21c0,4.71-3.95,7.04-11.8,7.04H6.09c-2.38,0-3.62-1-3.62-2.95c0-2,1.24-3,3.62-3h17.79
-                                			c2.76,0,4.14-0.38,4.14-1.14v-1.81c0-0.76-1.38-1.09-4.09-1.09h-9.99c-7.47,0-11.18-2-11.18-6.09V22.5c0-4.9,3.95-7.33,11.89-7.33
-                                			h5.52c2.38,0,3.57,1,3.57,2.95c0,2-1.19,2.95-3.57,2.95h-5.52c-2.85,0-4.28,0.48-4.28,1.43v1.38c0,0.81,1.43,1.19,4.23,1.19h9.99
-                                			c7.37,0,11.09,2,11.09,5.95V33.21z" />
-                            <path d="M51.53,40.25c-7.04,0-10.56-2.24-10.56-6.71v-2.95c0-4.47,3.52-6.66,10.56-6.66h18.7v-1.05c0-1.19-1.38-1.81-4.14-1.81
-                                			h-5.42c-2.38,0-3.57-0.95-3.57-2.95c0-1.95,1.19-2.95,3.57-2.95h5.42c7.85,0,11.75,2.52,11.75,7.66v10.13
-                                			c0,4.85-3.57,7.28-10.85,7.28H51.53z M70.22,32.68v-3.85H52.43c-2.52,0-3.81,0.57-3.81,1.57v2.33c0,1.05,1.28,1.57,3.81,1.57
-                                			h13.89C68.89,34.3,70.22,33.78,70.22,32.68z" />
-                            <path
-                                d="M84.97,23.31c0-5.42,4.28-8.14,12.8-8.14h2.66c2.52,0,3.76,1,3.76,3.09s-1.24,3.14-3.76,3.14h-3.04
-                                			c-3.04,0-4.57,0.57-4.57,1.81V37.2c0,2.19-1.33,3.28-3.95,3.28s-3.9-1.14-3.9-3.28V23.31z" />
-                            <path d="M113.71,40.25c-7.04,0-10.56-2.24-10.56-6.71v-2.95c0-4.47,3.52-6.66,10.56-6.66h18.7v-1.05c0-1.19-1.38-1.81-4.14-1.81
-                                			h-5.42c-2.38,0-3.57-0.95-3.57-2.95c0-1.95,1.19-2.95,3.57-2.95h5.42c7.85,0,11.75,2.52,11.75,7.66v10.13
-                                			c0,4.85-3.57,7.28-10.85,7.28H113.71z M132.41,32.68v-3.85h-17.79c-2.52,0-3.81,0.57-3.81,1.57v2.33c0,1.05,1.28,1.57,3.81,1.57
-                                			h13.89C131.07,34.3,132.41,33.78,132.41,32.68z" />
-                        </g>
-                        <g class="sjodin">
-                            <path d="M179.22,33.21c0,4.71-3.95,7.04-11.8,7.04h-17.79c-2.38,0-3.62-1-3.62-2.95c0-2,1.24-3,3.62-3h17.79
-                                			c2.76,0,4.14-0.38,4.14-1.14v-1.81c0-0.76-1.38-1.09-4.09-1.09h-9.99c-7.47,0-11.18-2-11.18-6.09V22.5c0-4.9,3.95-7.33,11.89-7.33
-                                			h5.52c2.38,0,3.57,1,3.57,2.95c0,2-1.19,2.95-3.57,2.95h-5.52c-2.85,0-4.28,0.48-4.28,1.43v1.38c0,0.81,1.43,1.19,4.23,1.19h9.99
-                                			c7.37,0,11.09,2,11.09,5.95V33.21z" />
-                            <path
-                                d="M182.98,48.24c-2.52,0-3.76-1.05-3.76-3.09c0-2.09,1.24-3.14,3.76-3.14h3.38c3.14,0,4.62-0.62,4.62-1.86V18.17
-                                			c0-2.14,1.33-3.24,3.95-3.24s3.9,1.09,3.9,3.24v21.89c0,5.47-4.23,8.18-12.85,8.18H182.98z M194.97,12.94
-                                			c-2.76,0-4.14-1.09-4.14-3.33c0-2.19,1.38-3.28,4.14-3.28c2.71,0,4.09,1.09,4.09,3.28C199.06,11.85,197.68,12.94,194.97,12.94z" />
-                            <path d="M218.85,40.25c-8.52,0-12.8-2.71-12.8-8.18v-8.75c0-5.42,4.28-8.14,12.8-8.14h9.61c8.56,0,12.85,2.71,12.85,8.14v8.75
-                                			c0,5.47-4.28,8.18-12.85,8.18H218.85z M233.46,23.26c0-1.24-1.57-1.86-4.61-1.86h-10.32c-3.09,0-4.61,0.62-4.61,1.86v8.9
-                                			c0,1.24,1.52,1.86,4.61,1.86h10.32c3.04,0,4.61-0.62,4.61-1.86V23.26z" />
-                            <path d="M261.38,40.25c-8.52,0-12.8-2.71-12.8-8.18v-8.75c0-5.42,4.28-8.14,12.8-8.14h14.94V8.9c0-2.14,1.38-3.24,3.95-3.24
-                                			c2.62,0,3.95,1.09,3.95,3.24v23.17c0,5.47-4.28,8.18-12.85,8.18H261.38z M276.32,32.16V21.41h-15.27c-3.04,0-4.62,0.62-4.62,1.86
-                                			v8.9c0,1.24,1.57,1.86,4.62,1.86h10.7C274.85,34.02,276.32,33.4,276.32,32.16z" />
-                            <path d="M295.5,12.94c-2.76,0-4.14-1.09-4.14-3.33c0-2.19,1.38-3.28,4.14-3.28c2.71,0,4.09,1.09,4.09,3.28
-                                			C299.59,11.85,298.21,12.94,295.5,12.94z M291.59,18.17c0-2.14,1.33-3.24,3.9-3.24c2.66,0,3.95,1.09,3.95,3.24V37.2
-                                			c0,2.19-1.28,3.28-3.9,3.28s-3.95-1.09-3.95-3.28V18.17z" />
-                            <path d="M334.13,23.26c0-1.24-1.52-1.86-4.62-1.86h-10.32c-3.04,0-4.57,0.62-4.57,1.86V37.2c0,2.19-1.28,3.28-3.9,3.28
-                                			c-2.66,0-3.95-1.09-3.95-3.28V23.36c0-5.47,4.28-8.18,12.8-8.18h9.61c8.52,0,12.8,2.71,12.8,8.18V37.2c0,2.19-1.28,3.28-3.9,3.28
-                                			s-3.95-1.09-3.95-3.28V23.26z" />
-                            <path
-                                d="M353.11,40.49c-2.81,0-4.23-1.14-4.23-3.43s1.43-3.43,4.28-3.43c2.85,0,4.28,1.14,4.28,3.43S356.01,40.49,353.11,40.49z" />
-                            <path d="M375.71,40.25c-8.52,0-12.8-2.71-12.8-8.18v-8.75c0-5.42,4.28-8.14,12.8-8.14h15.99c2.52,0,3.81,1,3.81,3.09
-                                			s-1.28,3.14-3.81,3.14h-16.32c-3.09,0-4.61,0.62-4.61,1.86v8.9c0,1.24,1.52,1.86,4.61,1.86h16.32c2.52,0,3.81,1.05,3.81,3.14
-                                			c0,2.05-1.28,3.09-3.81,3.09H375.71z" />
-                            <path d="M414.06,40.25c-8.52,0-12.8-2.71-12.8-8.18v-8.75c0-5.42,4.28-8.14,12.8-8.14h9.61c8.56,0,12.85,2.71,12.85,8.14v8.75
-                                			c0,5.47-4.28,8.18-12.85,8.18H414.06z M428.66,23.26c0-1.24-1.57-1.86-4.61-1.86h-10.32c-3.09,0-4.61,0.62-4.61,1.86v8.9
-                                			c0,1.24,1.52,1.86,4.61,1.86h10.32c3.04,0,4.61-0.62,4.61-1.86V23.26z" />
-                            <path d="M482.76,23.22c0-1.24-1.33-1.81-4.04-1.81h-3.62c-2.81,0-4.14,0.57-4.14,1.81V37.2c0,2.19-1.28,3.28-3.85,3.28
-                                			c-2.57,0-3.85-1.09-3.85-3.28V23.22c0-1.24-1.38-1.81-4.14-1.81h-3.62c-2.71,0-4.04,0.57-4.04,1.81V37.2
-                                			c0,2.19-1.28,3.28-3.9,3.28c-2.66,0-3.95-1.09-3.95-3.28V23.26c0-5.38,4.09-8.09,12.27-8.09h3.62c2.95,0,5.52,0.9,7.61,2.66
-                                			c2.09-1.76,4.62-2.66,7.61-2.66h3.66c8.18,0,12.23,2.71,12.23,8.09V37.2c0,2.19-1.28,3.28-3.95,3.28c-2.57,0-3.9-1.09-3.9-3.28
-                                			V23.22z" />
-                        </g>
-                        <g class="com">
-                            <path
-                                d="M353.11,40.49c-2.81,0-4.23-1.14-4.23-3.43s1.43-3.43,4.28-3.43c2.85,0,4.28,1.14,4.28,3.43S356.01,40.49,353.11,40.49z" />
-                            <path d="M375.71,40.25c-8.52,0-12.8-2.71-12.8-8.18v-8.75c0-5.42,4.28-8.14,12.8-8.14h15.99c2.52,0,3.81,1,3.81,3.09
-                                			s-1.28,3.14-3.81,3.14h-16.32c-3.09,0-4.61,0.62-4.61,1.86v8.9c0,1.24,1.52,1.86,4.61,1.86h16.32c2.52,0,3.81,1.05,3.81,3.14
-                                			c0,2.05-1.28,3.09-3.81,3.09H375.71z" />
-                            <path d="M414.06,40.25c-8.52,0-12.8-2.71-12.8-8.18v-8.75c0-5.42,4.28-8.14,12.8-8.14h9.61c8.56,0,12.85,2.71,12.85,8.14v8.75
-                                			c0,5.47-4.28,8.18-12.85,8.18H414.06z M428.66,23.26c0-1.24-1.57-1.86-4.61-1.86h-10.32c-3.09,0-4.61,0.62-4.61,1.86v8.9
-                                			c0,1.24,1.52,1.86,4.61,1.86h10.32c3.04,0,4.61-0.62,4.61-1.86V23.26z" />
-                            <path d="M482.76,23.22c0-1.24-1.33-1.81-4.04-1.81h-3.62c-2.81,0-4.14,0.57-4.14,1.81V37.2c0,2.19-1.28,3.28-3.85,3.28
-                                			c-2.57,0-3.85-1.09-3.85-3.28V23.22c0-1.24-1.38-1.81-4.14-1.81h-3.62c-2.71,0-4.04,0.57-4.04,1.81V37.2
-                                			c0,2.19-1.28,3.28-3.9,3.28c-2.66,0-3.95-1.09-3.95-3.28V23.26c0-5.38,4.09-8.09,12.27-8.09h3.62c2.95,0,5.52,0.9,7.61,2.66
-                                			c2.09-1.76,4.62-2.66,7.61-2.66h3.66c8.18,0,12.23,2.71,12.23,8.09V37.2c0,2.19-1.28,3.28-3.95,3.28c-2.57,0-3.9-1.09-3.9-3.28
-                                			V23.22z" />
-                        </g>
-                    </g>
-                </svg>
-
-            </a>
-        </div>
+        <footer>
+            <div class="container text-left custom-container">
+                <div class="row">
+                    <div class="col">
+                        <a href="https://github.com/sarasjodincom/MyWeatherApp" target="_blank">Coded by</a>
+                        <a href="https://wwwsarasjodincom./" target="_blank">
+                            <img class="small-logo" src="images/Logo_sarasjodincom_svg-01.svg" alt="sarasjodincom">
+                        </a>
+                    </div>
+                    <div class="col d-flex justify-content-end">
+                        <nav style="--bs-breadcrumb-divider: '';" aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                <li class="breadcrumb-item"><a href="about.html">About</a></li>
+                                <li class="breadcrumb-item active"><a href="#">Feedback</a></li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <div class="container text-left">
+                <div class="row">
+                    <div class="col d-flex flex-wrap justify-content-start"><a href="https://www.netlify.com"
+                            target="_blank">
+                            <img src="images/logo-netlify.png" alt="Logo Netlify" width="80">
+                        </a>
+                        <p class="powered-by"><a href="https://www.netlify.com" target="_blank">Powered by Netlify</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </div>
-    </footer>
-    </div>
-
     <script src="src/index-form.js"></script>
 </body>
 
