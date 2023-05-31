@@ -20,7 +20,13 @@
 }
 
 .my-custom-font {
-  font-size: calc(1.5vw + 0.9rem);
+  font-size: large;
+}
+
+@media (min-width: 500px) {
+  .my-custom-font {
+    font-size: x-large;
+  }
 }
 
 h1 {
@@ -145,10 +151,6 @@ div.d-flex .btn-light {
 p.powered-by {
   padding-left: 8px;
   margin-top: 4px;
-}
-
-.logo-text {
-  text-align: baseline;
 }
 
 breadcrumb-item a {
