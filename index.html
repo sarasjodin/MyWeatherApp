@@ -60,8 +60,8 @@
                         <div class="col">
                             <img src="src/images/sunny.svg" alt="Sunny" />
                         </div>
-                        <div class="current-temperature col">30<span class="current-temp-units">°C | <a
-                                    href="#">°F</a></span>
+                        <div class="current-temperature col"><span id="temperature"></span><span
+                                class="current-temp-units">°C | <a href="#">°F</a></span>
                         </div>
                     </div>
                 </div>
@@ -70,13 +70,15 @@
                 <div class="container text-left">
                     <div class="row align-items-end">
                         <div class="col">
-                            <h2><span class="city">City name</span></h2>
+                            <h2><span id="city" class="city"></span></h2>
                             <h2>Monday 07:00</h2>
-                            <h2>Sunny all day</h2>
+                            <h2 id="description"></h2>
                         </div>
                         <div class="col">
-                            <p><span class="highlight">Precipitation: </span>74%<br /><span class="highlight">Humidity:
-                                </span>55%<br /><span class="highlight">Wind: </span>18
+                            <p><span class="highlight">Precipitation: </span><span
+                                    id="precipitation"></span>%<br /><span class="highlight">Humidity:
+                                </span><span id="humidity"></span>%<br /><span class="highlight">Wind: </span><span
+                                    id="wind"></span>
                                 km/h</p>
                         </div>
                     </div>
