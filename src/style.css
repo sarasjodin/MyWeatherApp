@@ -104,6 +104,9 @@ header button.btn.btn-light {
 
 #description {
   font-size: medium;
+}
+
+#description::first-letter {
   text-transform: capitalize;
 }
 
