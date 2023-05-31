@@ -19,6 +19,10 @@
   border-radius: 8px;
 }
 
+.my-custom-font {
+  font-size: calc(1.5vw + 0.9rem);
+}
+
 h1 {
   font-size: x-large;
 }
@@ -128,9 +132,23 @@ div.d-flex .btn-light {
 }
 
 .small-logo {
-  vertical-align: center;
   width: 65%;
   padding-left: 4px;
+}
+
+.power-logo {
+  width: 45px;
+  height: 45px;
+  padding-left: 4px;
+}
+
+p.powered-by {
+  padding-left: 8px;
+  margin-top: 4px;
+}
+
+.logo-text {
+  text-align: baseline;
 }
 
 breadcrumb-item a {
@@ -141,6 +159,11 @@ breadcrumb-item a {
   color: #0d2d4f; /* Set the active link color */
   font-weight: bold; /* Make the active link bold */
   text-decoration: none; /* Remove underline from active link */
+}
+
+.custom-container {
+  height: 25px;
+  overflow: hidden;
 }
 
 /* Form & About styles */

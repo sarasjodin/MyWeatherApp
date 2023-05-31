@@ -2,161 +2,181 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-  <link rel="stylesheet" href="src/style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="src/style.css">
 
-  <link
-    href="https://fonts.googleapis.com/css2?family=Codystar:wght@300;400&family=Lato:wght@100;300;400;700;900&display=swap"
-    rel="stylesheet">
-  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-  <title>My Bootstrap Weather App</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Codystar:wght@300;400&family=Lato:wght@100;300;400;700;900&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>My Bootstrap Weather App</title>
 </head>
 
 <body>
-  <div class="page-wrapper">
-    <header>
-      <div class="d-flex align-items-center">
-        <img class="larger-logo" src="images/Logo_sarasjodincom_svg-01.svg" alt="The weather logo">
-        <h1>The Weather App</h1>
-      </div>
-      <div class="row">
-        <div class="col d-flex justify-content-start">
-          <button type="button" class="btn btn-light">Light theme</button>
-        </div>
-        <div class="col d-flex justify-content-center">
-          <button type="button" class="btn btn-light">Creative theme</button>
-        </div>
-        <div class="col d-flex justify-content-end">
-          <button type="button" class="btn btn-light">Dark theme</button>
-        </div>
-      </div>
-    </header>
-    <main class="app-container">
-      <form class="container search-bar">
-        <div class="row">
-          <div class="col">
-            <div class="d-flex">
-              <input type="text" id="search-input" class="form-control flex-grow-1" placeholder="Enter a city name" />
-              <button type="button" class="btn btn-light">Search</button>
+    <div class="page-wrapper">
+        <header>
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-auto">
+                        <img class="logo" src="images/Climasense-01.svg" width="40" height="40" alt="The weather logo">
+                    </div>
+                    <div class="col">
+                        <h1 class="logo-text my-custom-font ">My Bootstrap Weather App</h1>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-      </form>
-      <section class="current-temp-main">
-        <div class="container">
-          <div class="row">
-            <div class="col">
-              <img src="images/sunny.svg" alt="Sunny" />
+            <div class="row">
+                <div class="col d-flex justify-content-start">
+                    <button type="button" class="btn btn-light">Light theme</button>
+                </div>
+                <div class="col d-flex justify-content-center">
+                    <button type="button" class="btn btn-light">Creative theme</button>
+                </div>
+                <div class="col d-flex justify-content-end">
+                    <button type="button" class="btn btn-light">Dark theme</button>
+                </div>
             </div>
-            <div class="current-temperature col">30<span class="current-temp-units">°C | <a href="#">°F</a></span>
+        </header>
+        <main class="app-container">
+            <form class="container search-bar">
+                <div class="row">
+                    <div class="col">
+                        <div class="d-flex">
+                            <input type="text" id="search-input" class="form-control flex-grow-1"
+                                placeholder="Enter a city name" />
+                            <button type="button" class="btn btn-light">Search</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <section class="current-temp-main">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <img src="images/sunny.svg" alt="Sunny" />
+                        </div>
+                        <div class="current-temperature col">30<span class="current-temp-units">°C | <a
+                                    href="#">°F</a></span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="current-search-details">
+                <div class="container text-left">
+                    <div class="row align-items-end">
+                        <div class="col">
+                            <h2><span class="city">City name</span></h2>
+                            <h2>Monday 07:00</h2>
+                            <h2>Sunny all day</h2>
+                        </div>
+                        <div class="col">
+                            <p><span class="highlight">Precipitation: </span>74%<br /><span class="highlight">Humidity:
+                                </span>55%<br /><span class="highlight">Wind: </span>18
+                                km/h</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="container text-center forecast">
+                <div class="row">
+                    <div class="col">
+                        <h3>day 0</h3>
+                        <img src="images/sunny.svg" alt="Sunny" />
+                        <div>
+                            <span class="high">10°</span>
+                            <span class="low">8°</span>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <h3>day 1</h3>
+                        <img src="images/sunny.svg" alt="Sunny" />
+                        <div>
+                            <span class="high">10°</span>
+                            <span class="low">8°</span>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <h3>day 2</h3>
+                        <img src="images/sunny.svg" alt="Sunny" />
+                        <div>
+                            <span class="high">10°</span>
+                            <span class="low">8°</span>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <h3>day 3</h3>
+                        <img src="images/sunny.svg" alt="Sunny" />
+                        <div>
+                            <span class="high">10°</span>
+                            <span class="low">8°</span>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <h3>day 4</h3>
+                        <img src="images/sunny.svg" alt="Sunny" />
+                        <div>
+                            <span class="high">10°</span>
+                            <span class="low">8°</span>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <h3>day 5</h3>
+                        <img src="images/sunny.svg" alt="Sunny" />
+                        <div>
+                            <span class="high">10°</span>
+                            <span class="low">8°</span>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <h3>day 6</h3>
+                        <img src="images/sunny.svg" alt="Sunny" />
+                        <div>
+                            <span class="high">10°</span>
+                            <span class="low">8°</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div class="container text-left custom-container">
+                <div class="row">
+                    <div class="col">
+                        <a href="https://github.com/sarasjodincom/MyWeatherApp" target="_blank">Coded by</a>
+                        <a href="https://wwwsarasjodincom./" target="_blank">
+                            <img class="small-logo" src="images/Logo_sarasjodincom_svg-01.svg" alt="sarasjodincom">
+                        </a>
+                    </div>
+                    <div class="col d-flex justify-content-end">
+                        <nav style="--bs-breadcrumb-divider: '';" aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item active"><a href="#">Home</a></li>
+                                <li class="breadcrumb-item"><a href="about.html">About</a></li>
+                                <li class="breadcrumb-item"><a href="form.html">Feedback</a></li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-      </section>
-      <section class="current-search-details">
-        <div class="container text-left">
-          <div class="row align-items-end">
-            <div class="col">
-              <h2><span class="city">City name</span></h2>
-              <h2>Monday 07:00</h2>
-              <h2>Sunny all day</h2>
+            <div class="container text-left">
+                <div class="row">
+                    <div class="col d-flex flex-wrap justify-content-start"><a href="https://www.netlify.com"
+                            target="_blank">
+                            <img src="images/logo-netlify.png" alt="Logo Netlify" width="80">
+                        </a>
+                        <p class="powered-by"><a href="https://www.netlify.com" target="_blank">Powered by Netlify</a>
+                        </p>
+                    </div>
+                </div>
             </div>
-            <div class="col">
-              <p><span class="highlight">Precipitation: </span>74%<br /><span class="highlight">Humidity:
-                </span>55%<br /><span class="highlight">Wind: </span>18
-                km/h</p>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="container text-center forecast">
-        <div class="row">
-          <div class="col">
-            <h3>day 0</h3>
-            <img src="images/sunny.svg" alt="Sunny" />
-            <div>
-              <span class="high">10°</span>
-              <span class="low">8°</span>
-            </div>
-          </div>
-          <div class="col">
-            <h3>day 1</h3>
-            <img src="images/sunny.svg" alt="Sunny" />
-            <div>
-              <span class="high">10°</span>
-              <span class="low">8°</span>
-            </div>
-          </div>
-          <div class="col">
-            <h3>day 2</h3>
-            <img src="images/sunny.svg" alt="Sunny" />
-            <div>
-              <span class="high">10°</span>
-              <span class="low">8°</span>
-            </div>
-          </div>
-          <div class="col">
-            <h3>day 3</h3>
-            <img src="images/sunny.svg" alt="Sunny" />
-            <div>
-              <span class="high">10°</span>
-              <span class="low">8°</span>
-            </div>
-          </div>
-          <div class="col">
-            <h3>day 4</h3>
-            <img src="images/sunny.svg" alt="Sunny" />
-            <div>
-              <span class="high">10°</span>
-              <span class="low">8°</span>
-            </div>
-          </div>
-          <div class="col">
-            <h3>day 5</h3>
-            <img src="images/sunny.svg" alt="Sunny" />
-            <div>
-              <span class="high">10°</span>
-              <span class="low">8°</span>
-            </div>
-          </div>
-          <div class="col">
-            <h3>day 6</h3>
-            <img src="images/sunny.svg" alt="Sunny" />
-            <div>
-              <span class="high">10°</span>
-              <span class="low">8°</span>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-    <footer>
-      <div class="container text-center">
-        <div class="row">
-          <div class="col">
-            <a href="https://github.com/sarasjodin/MyWeatherApp" target=" _blank">Coded
-              by </a><a href="https://www.sarasjodin.com/" target=" _blank"><img class="small-logo"
-                src="images/Logo_sarasjodincom_svg-01.svg" alt="sarasjodin.com"></a>
-          </div>
-          <div class="col d-flex justify-content-end">
-            <nav style="--bs-breadcrumb-divider: '';" aria-label="breadcrumb">
-              <ol class="breadcrumb">
-                <li class="breadcrumb-item active"><a href="#">Home</a></li>
-                <li class="breadcrumb-item" aria-current="page"><a href="about.html">About</a>
-                </li>
-                <li class="breadcrumb-item" aria-current="page"><a href="form.html">Feedback</a></li>
-              </ol>
-            </nav>
-          </div>
-        </div>
-      </div>
-    </footer>
-    <script src="src/index.js"></script>
-  </div>
+        </footer>
+
+        <script src="src/index.js"></script>
+    </div>
 </body>
 
 </html>

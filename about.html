@@ -16,9 +16,17 @@
 
 <body>
     <div class="page-wrapper">
-        <header class="d-flex align-items-center">
-            <img class="larger-logo" src="images/Logo_sarasjodincom_svg-01.svg" alt="The weather logo">
-            <h1>The Weather App</h1>
+        <header>
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-auto">
+                        <img class="logo" src="images/Climasense-01.svg" width="40" height="40" alt="The weather logo">
+                    </div>
+                    <div class="col">
+                        <h1 class="logo-text my-custom-font ">My Bootstrap Weather App</h1>
+                    </div>
+                </div>
+            </div>
         </header>
         <section class="about-container">
             <p><strong>Hello! I wanted to share with you some insights about the weather app I've been working on. From
@@ -167,27 +175,40 @@
                 I hope this explanation helps you understand the work that goes into building a weather app from a
                 developer's point of
                 view.</p>
+            <h2>Do you have an issue or feedback to share?</h2>
+            <p>Please file a bug on <a href="https://github.com/sarasjodin/MyWeatherApp/blob/master/CODE_OF_CONDUCT.md"
+                    target="_blank">GitHub</a>.</p>
 
         </section>
         <footer>
-            <div class="container text-center">
+            <div class="container text-left custom-container">
                 <div class="row">
                     <div class="col">
-                        <a href="https://github.com/sarasjodin/MyWeatherApp" target=" _blank">Coded
-                            by </a><a href="https://www.sarasjodin.com/" target=" _blank"><img class="small-logo"
-                                src="images/Logo_sarasjodincom_svg-01.svg" alt="sarasjodin.com"></a>
+                        <a href="https://github.com/sarasjodincom/MyWeatherApp" target="_blank">Coded by</a>
+                        <a href="https://wwwsarasjodincom./" target="_blank">
+                            <img class="small-logo" src="images/Logo_sarasjodincom_svg-01.svg" alt="sarasjodincom">
+                        </a>
                     </div>
                     <div class="col d-flex justify-content-end">
                         <nav style="--bs-breadcrumb-divider: '';" aria-label="breadcrumb">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                                <li class="breadcrumb-item active" aria-current="page"><a href="#">About</a>
-                                </li>
-                                <li class="breadcrumb-item" aria-current="page"><a href="form.html">Feedback</a></li>
+                                <li class="breadcrumb-item active"><a href="#">About</a></li>
+                                <li class="breadcrumb-item"><a href="form.html">Feedback</a></li>
                             </ol>
                         </nav>
                     </div>
-
+                </div>
+            </div>
+            <div class="container text-left">
+                <div class="row">
+                    <div class="col d-flex flex-wrap justify-content-start"><a href="https://www.netlify.com"
+                            target="_blank">
+                            <img src="images/logo-netlify.png" alt="Logo Netlify" width="80">
+                        </a>
+                        <p class="powered-by"><a href="https://www.netlify.com" target="_blank">Powered by Netlify</a>
+                        </p>
+                    </div>
                 </div>
             </div>
         </footer>
