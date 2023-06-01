@@ -7,12 +7,29 @@ body {
   background-size: cover;
 }
 
-.page-wrapper {
-  max-width: 600px;
-  margin: 20px auto;
-  padding: 20px;
-  background-color: white;
-  border-radius: 8px;
+.forecast .row > * {
+  padding-right: calc(var(--bs-gutter-x) * 0.3);
+  padding-left: calc(var(--bs-gutter-x) * 0.3);
+}
+
+@media (min-width: 0) and (max-width: 600px) {
+  .page-wrapper {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 0 0 8px 8px;
+  }
+}
+
+@media (min-width: 601px) {
+  .page-wrapper {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+  }
 }
 
 .search-bar,
@@ -164,7 +181,7 @@ header button.btn {
 
 span.high,
 span.low {
-  font-size: smaller;
+  font-size: x-small;
 }
 
 span.high {
