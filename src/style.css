@@ -129,7 +129,7 @@ header button.btn {
   /* vertical-align: text-top;
  */
   padding: 2px;
-  align-self: top;
+  /* align-self: top; */
 }
 
 .currenttemp {

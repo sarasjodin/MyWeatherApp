@@ -35,7 +35,7 @@ function displayTemperature(response) {
   let iconCode = response.data.weather[0].icon;
   iconElement.setAttribute(
     "src",
-    `http://openweathermap.org/img/wn/${iconCode}@4x.png`
+    `https://openweathermap.org/img/wn/${iconCode}@4x.png`
   );
   iconElement.setAttribute("alt", `${descriptionElement}`);
 
@@ -169,6 +169,7 @@ creativeThemeButton.addEventListener("click", function () {
   const randomColor1 = getRandomColor();
   const randomColor2 = getRandomColor();
   // Apply creative theme styles dynamically
+  let iconElement = document.querySelector("#weather-icon img");
   document.body.style.setProperty("--creative-theme-color1", randomColor1);
   document.body.style.setProperty("--creative-theme-color2", randomColor2);
   // Add creative theme class
@@ -187,6 +188,7 @@ darkThemeButton.addEventListener("click", function () {
 // Set the light theme as default on page load
 document.addEventListener("DOMContentLoaded", function () {
   document.body.classList.add("light-theme");
+  document.body.classList.remove("dark-theme", "creative-theme");
 });
 
 // Helper function to generate random color
