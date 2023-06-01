@@ -39,6 +39,8 @@ function displayTemperature(response) {
   );
   iconElement.setAttribute("alt", `${descriptionElement}`);
 
+  celsiusTemperature = response.data.main.temp;
+
   temperatureElement.innerHTML = Math.round(response.data.main.temp);
   cityElement.innerHTML = response.data.name;
   dateElement.innerHTML = formatDate(response.data.dt * 1000);
@@ -71,10 +73,28 @@ let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${
 
 axios.get(apiUrl).then(displayTemperature);
 
-/* let formElement = document.querySelector("#search-form");
-formElement.addEventListener("submit", search); */
+function displayFahrenheitTemperature(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temperature");
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+  celsiusLinkElement.classList.remove("active");
+  fahrenheitLinkElement.classList.add("active");
+}
+
+function displayCelsiusTemperature(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+  fahrenheitLinkElement.classList.remove("active");
+  celsiusLinkElement.classList.add("active");
+}
+
+let celsiusLinkElement = document.querySelector("#celsius-link");
+let fahrenheitLinkElement = document.querySelector("#fahrenheit-link");
 
 let formElement = document.querySelector(".search-bar");
-let submitButton = formElement.querySelector(".btn");
-
 formElement.addEventListener("submit", search);
+
+fahrenheitLinkElement.addEventListener("click", displayFahrenheitTemperature);
+celsiusLinkElement.addEventListener("click", displayCelsiusTemperature);
