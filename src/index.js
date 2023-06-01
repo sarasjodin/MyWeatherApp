@@ -50,6 +50,16 @@ function displayTemperature(response) {
   windElement.innerHTML = Math.round(response.data.wind.speed);
 }
 
+function updateWeatherDataWithGeolocation(position) {
+  let latitude = position.coords.latitude;
+  let longitude = position.coords.longitude;
+  let apiKey = "ff1d9ea9376b5c27a82e04fc2b2abdbb";
+  let units = "units=metric";
+  let apiLink = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&${units}`;
+
+  axios.get(apiLink).then(displayTemperature);
+}
+
 function search(event) {
   event.preventDefault();
   let searchInputElement = document.querySelector("#search-input");
@@ -98,3 +108,43 @@ formElement.addEventListener("submit", search);
 
 fahrenheitLinkElement.addEventListener("click", displayFahrenheitTemperature);
 celsiusLinkElement.addEventListener("click", displayCelsiusTemperature);
+
+// Get references to the required elements for geolocation
+let iconElement = document.querySelector("#weather-icon img");
+let temperatureElement = document.querySelector("#temperature");
+let cityElement = document.querySelector("#city");
+let dateElement = document.querySelector("#date");
+let descriptionElement = document.querySelector("#description");
+let precipitationElement = document.querySelector("#precipitation");
+let humidityElement = document.querySelector("#humidity");
+let windElement = document.querySelector("#wind");
+let searchInputElement = document.querySelector("#search-input");
+
+// Default geolocation data on page load
+function getDefaultGeolocationData() {
+  navigator.geolocation.getCurrentPosition(function (position) {
+    updateWeatherDataWithGeolocation(position);
+
+    // Update innerHTML elements
+    iconElement.setAttribute("src", "");
+    temperatureElement.innerHTML = "Loading...";
+    cityElement.innerHTML = "Loading...";
+    dateElement.innerHTML = "Loading...";
+    descriptionElement.innerHTML = "Loading...";
+    precipitationElement.innerHTML = "Loading...";
+    humidityElement.innerHTML = "Loading...";
+    windElement.innerHTML = "Loading...";
+
+    // Set active link and clear search input
+    celsiusLinkElement.classList.add("active");
+    fahrenheitLinkElement.classList.remove("active");
+    searchInputElement.value = "";
+  });
+}
+
+formElement.addEventListener("submit", search);
+fahrenheitLinkElement.addEventListener("click", displayFahrenheitTemperature);
+celsiusLinkElement.addEventListener("click", displayCelsiusTemperature);
+
+// Get default geolocation data on page load
+getDefaultGeolocationData();
