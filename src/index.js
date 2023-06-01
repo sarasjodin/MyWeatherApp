@@ -127,7 +127,7 @@ function getDefaultGeolocationData() {
 
     // Update innerHTML elements
     iconElement.setAttribute("src", "");
-    temperatureElement.innerHTML = "Loading...";
+    temperatureElement.innerHTML = "....";
     cityElement.innerHTML = "Loading...";
     dateElement.innerHTML = "Loading...";
     descriptionElement.innerHTML = "Loading...";

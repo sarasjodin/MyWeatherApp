@@ -214,7 +214,6 @@ p.powered-by {
   }
   .btn-light {
     --bs-btn-border-color: #bebebe;
-    --bs-btn-padding-y: 3px;
   }
 
   .light-theme-button,
@@ -234,7 +233,28 @@ p.powered-by {
 .dark-theme {
   .app-container {
     background-color: #000000;
-    color: #cacaca;
+    color: #979797;
+  }
+  #search-input {
+    background-color: #979797;
+    border: 1px solid #4a4a4a;
+  }
+  .submit {
+    background-color: #979797;
+    border: 1px solid #4a4a4a;
+  }
+  #celsius-link.active,
+  #fahrenheit-link.active {
+    color: rgb(143, 143, 143);
+    text-decoration: none;
+    cursor: default;
+    font-weight: 500;
+  }
+
+  #celsius-link:not(.active),
+  #fahrenheit-link:not(.active) {
+    color: #ffffff;
+    font-weight: 600;
   }
 }
 
