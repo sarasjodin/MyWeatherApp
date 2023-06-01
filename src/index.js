@@ -22,6 +22,27 @@ function formatDate(timestamp) {
   return `${day} ${hours}:${minutes}`;
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+  let days = ["Thu", "Fri", "Sat", "Sun", "Mon", "Tue", "Wed"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="col">
+        <h3>${day}</h3>
+        <img src="src/images/sunny.svg" alt="Sunny" />
+        <div>
+          <span class="high">hi</span>°<span class="low">lo</span>°
+        </div>
+        </div>`;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function displayTemperature(response) {
   let iconElement = document.querySelector("#weather-icon img");
   let temperatureElement = document.querySelector("#temperature");
@@ -80,6 +101,9 @@ let apiKey = "ff1d9ea9376b5c27a82e04fc2b2abdbb";
 let city = "Stockholm";
 let units = "units=metric";
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&${units}`;
+
+// Too be removed
+displayForecast();
 
 axios.get(apiUrl).then(displayTemperature);
 
