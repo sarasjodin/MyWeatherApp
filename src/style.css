@@ -112,7 +112,8 @@ header button.btn.btn-light {
 }
 
 .current-temp-main {
-  padding: 1rem 0 1rem 1.5rem;
+  /* padding: 1rem 0 1rem 1.5rem; */
+  padding: 0;
 }
 
 .current-temp-units {
@@ -122,10 +123,11 @@ header button.btn.btn-light {
   vertical-align: text-top;
 }
 
-.current-temperature {
+.currenttemp {
   font-size: 425%;
   font-weight: 600;
   align-self: center;
+  /* align-self: top; Test with final image dimensions*/
   padding: 0;
 }
 

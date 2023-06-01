@@ -8,7 +8,15 @@ function formatDate(timestamp) {
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
-  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
   let day = days[date.getDay()];
 
   return `${day} ${hours}:${minutes}`;
@@ -40,9 +48,33 @@ function displayTemperature(response) {
   windElement.innerHTML = Math.round(response.data.wind.speed);
 }
 
+function search(event) {
+  event.preventDefault();
+  let searchInputElement = document.querySelector("#search-input");
+  let newCity = searchInputElement.value.trim();
+  console.log(searchInputElement.value);
+
+  if (newCity) {
+    city = newCity;
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&${units}`;
+    axios.get(apiUrl).then(displayTemperature);
+    document.querySelector("#city").textContent = city;
+  }
+
+  searchInputElement.value = "";
+}
+
 let apiKey = "ff1d9ea9376b5c27a82e04fc2b2abdbb";
 let city = "New York";
 let units = "units=metric";
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&${units}`;
 
 axios.get(apiUrl).then(displayTemperature);
+
+/* let formElement = document.querySelector("#search-form");
+formElement.addEventListener("submit", search); */
+
+let formElement = document.querySelector(".search-bar");
+let submitButton = formElement.querySelector(".btn");
+
+formElement.addEventListener("submit", search);

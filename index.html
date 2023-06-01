@@ -49,7 +49,7 @@
                         <div class="d-flex">
                             <input type="text" id="search-input" class="form-control flex-grow-1"
                                 placeholder="Enter a city name" />
-                            <button type="button" class="btn btn-light">Search</button>
+                            <button type="submit" class="btn btn-light">Search</button>
                         </div>
                     </div>
                 </div>
@@ -57,11 +57,13 @@
             <section class="current-temp-main">
                 <div class="container">
                     <div class="row">
-                        <div class="col">
-                            <span id="weather-icon"><img width="255" height="255"></span>
+                        <div class="col-6 text-end">
+                            <span id="weather-icon"><img width="200" height="200"></span>
                         </div>
-                        <div class="current-temperature col"><span id="temperature"></span><span
-                                class="current-temp-units">°C | <a href="#">°F</a></span>
+                        <div class="currenttemp d-flex col-6"><span id="temperature"></span><span
+                                class="current-temp-units">°C
+                                |
+                                <a href="#">°F</a></span>
                         </div>
                     </div>
                 </div>
@@ -69,12 +71,12 @@
             <section class="current-search-details">
                 <div class="container text-left">
                     <div class="row align-items-end">
-                        <div class="col">
+                        <div class="col-7">
                             <h2><span id="city" class="city"></span></h2>
-                            <h2>Last updated <span id="date"></span></h2>
+                            <h2><span id="date"></span></h2>
                             <h2 id="description"></h2>
                         </div>
-                        <div class="col">
+                        <div class="col-5">
                             <p><span class="highlight">Precipitation: </span><span
                                     id="precipitation"></span>%<br /><span class="highlight">Humidity:
                                 </span><span id="humidity"></span>%<br /><span class="highlight">Wind: </span><span
