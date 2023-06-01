@@ -41,10 +41,10 @@ function displayForecast(response) {
       forecastHTML =
         forecastHTML +
         `<div class="col">
-        <h3>${formatDay(forecastDay.dt)}</h3>
+        <h3 class="text-center">${formatDay(forecastDay.dt)}</h3>
         <img src="https://openweathermap.org/img/wn/${
           forecastDay.weather[0].icon
-        }.png" alt="" width="50" />
+        }.png" alt="weather icon" width="47"/>
         <div>
           <span class="high">${Math.round(
             forecastDay.temp.max
@@ -61,7 +61,6 @@ function displayForecast(response) {
 }
 
 function getForecast(coordinates) {
-  console.log(coordinates);
   let apiKeyForecast = "1266ad07b66517497b1acf79ea5a6a64";
   let apiLinkForecast = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKeyForecast}&units=metric`;
   axios.get(apiLinkForecast).then(displayForecast);
@@ -111,8 +110,6 @@ function search(event) {
   event.preventDefault();
   let searchInputElement = document.querySelector("#search-input");
   let newCity = searchInputElement.value.trim();
-  /*   console.log(searchInputElement.value);
-   */
   if (newCity) {
     city = newCity;
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&${units}`;
