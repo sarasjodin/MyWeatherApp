@@ -77,7 +77,7 @@ function search(event) {
 }
 
 let apiKey = "ff1d9ea9376b5c27a82e04fc2b2abdbb";
-let city = "New York";
+let city = "Stockholm";
 let units = "units=metric";
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&${units}`;
 
@@ -148,3 +148,53 @@ celsiusLinkElement.addEventListener("click", displayCelsiusTemperature);
 
 // Get default geolocation data on page load
 getDefaultGeolocationData();
+
+// Theme switcher
+
+// Light Theme Button
+const lightThemeButton = document.querySelector("#light-theme-button");
+lightThemeButton.addEventListener("click", function () {
+  // Remove other theme classes
+  document.body.classList.remove("creative-theme", "dark-theme");
+  // Add light theme class
+  document.body.classList.add("light-theme");
+});
+
+// Creative Theme Button
+const creativeThemeButton = document.querySelector("#creative-theme-button");
+creativeThemeButton.addEventListener("click", function () {
+  // Remove other theme classes
+  document.body.classList.remove("light-theme", "dark-theme");
+  // Generate random colors for creative theme
+  const randomColor1 = getRandomColor();
+  const randomColor2 = getRandomColor();
+  // Apply creative theme styles dynamically
+  document.body.style.setProperty("--creative-theme-color1", randomColor1);
+  document.body.style.setProperty("--creative-theme-color2", randomColor2);
+  // Add creative theme class
+  document.body.classList.add("creative-theme");
+});
+
+// Dark Theme Button
+const darkThemeButton = document.querySelector("#dark-theme-button");
+darkThemeButton.addEventListener("click", function () {
+  // Remove other theme classes
+  document.body.classList.remove("light-theme", "creative-theme");
+  // Add dark theme class
+  document.body.classList.add("dark-theme");
+});
+
+// Set the light theme as default on page load
+document.addEventListener("DOMContentLoaded", function () {
+  document.body.classList.add("light-theme");
+});
+
+// Helper function to generate random color
+function getRandomColor() {
+  const letters = "0123456789ABCDEF";
+  let color = "#";
+  for (let i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+  return color;
+}

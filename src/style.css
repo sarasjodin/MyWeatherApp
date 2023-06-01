@@ -84,9 +84,10 @@ ol.breadcrumb {
 
 header {
   padding: 0 10px;
+  margin-bottom: 5px;
 }
 
-header button.btn.btn-light {
+header button.btn {
   font-size: xx-small;
 }
 
@@ -168,16 +169,8 @@ a {
   text-decoration: none;
 }
 
-div.d-flex .btn-light {
+div.d-flex .submit {
   margin-left: 10px;
-}
-
-.btn-light {
-  --bs-btn-bg: none;
-  --bs-btn-border-color: none;
-  --bs-btn-padding-y: 5px;
-  border-color: unset;
-  font-size: small;
 }
 
 .small-logo {
@@ -210,6 +203,39 @@ p.powered-by {
 .custom-container {
   height: 25px;
   overflow: hidden;
+}
+
+/* Theme styles */
+/* Light Theme */
+.light-theme {
+  .app-container {
+    background-color: #ffffff;
+    color: #828282;
+  }
+  .btn-light {
+    --bs-btn-border-color: #bebebe;
+    --bs-btn-padding-y: 3px;
+  }
+
+  .light-theme-button,
+  .creative-theme-button,
+  .dark-theme-button {
+    font-size: x-small;
+  }
+}
+
+/* Creative Theme */
+.creative-theme .app-container {
+  background-color: var(--creative-theme-color1);
+  color: #ffffff; /* Adjust the text color as needed */
+}
+
+/* Dark Theme */
+.dark-theme {
+  .app-container {
+    background-color: #000000;
+    color: #cacaca;
+  }
 }
 
 /* Form & About styles */
