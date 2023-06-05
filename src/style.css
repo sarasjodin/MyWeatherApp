@@ -136,17 +136,13 @@ header button.btn {
 }
 
 .current-temp-main {
-  /* padding: 1rem 0 1rem 1.5rem; */
   padding: 0;
 }
 
 .current-temp-units {
   position: relative;
   top: 68px;
-  /* vertical-align: text-top;
- */
   padding: 2px;
-  /* align-self: top; */
 }
 
 .currenttemp {
@@ -154,7 +150,6 @@ header button.btn {
   font-size: 450%;
   font-weight: 600;
   align-self: center;
-  /* align-self: top; Test with final image dimensions*/
   padding: 0;
 }
 
@@ -169,7 +164,7 @@ header button.btn {
 #celsius-link:not(.active),
 #fahrenheit-link:not(.active) {
   color: #0d6efd;
-  font-weight: 500;
+  font-weight: 700;
 }
 
 .current-search-details p {
@@ -230,56 +225,61 @@ p.powered-by {
 }
 
 /* Theme styles */
-/* Light Theme */
-.light-theme {
-  .app-container {
-    background-color: #ffffff;
-    color: #828282;
-  }
-  .btn-light {
-    --bs-btn-border-color: #bebebe;
-  }
 
-  .light-theme-button,
-  .creative-theme-button,
-  .dark-theme-button {
-    font-size: x-small;
-  }
+.light-theme-button,
+.creative-theme-button,
+.dark-theme-button {
+  font-size: x-small;
+}
+
+.btn-light {
+  --bs-btn-border-color: #bebebe;
+}
+
+/* Light Theme */
+.light-theme > .page-wrapper > .app-container {
+  background-color: #ffffff;
+  color: #828282;
 }
 
 /* Creative Theme */
-.creative-theme .app-container {
+.creative-theme > .page-wrapper > .app-container {
   background-color: var(--creative-theme-color1);
   color: #ffffff; /* Adjust the text color as needed */
 }
+.creative-theme > .page-wrapper > .app-container #celsius-link.active,
+.creative-theme > .page-wrapper > .app-container #fahrenheit-link.active {
+  color: rgb(255, 255, 255);
+}
+
+.creative-theme > .page-wrapper > .app-container #celsius-link:not(.active),
+.creative-theme > .page-wrapper > .app-container #fahrenheit-link:not(.active) {
+  color: #ffffff;
+}
 
 /* Dark Theme */
-.dark-theme {
-  .app-container {
-    background-color: #000000;
-    color: #979797;
-  }
-  #search-input {
-    background-color: #979797;
-    border: 1px solid #4a4a4a;
-  }
-  .submit {
-    background-color: #979797;
-    border: 1px solid #4a4a4a;
-  }
-  #celsius-link.active,
-  #fahrenheit-link.active {
-    color: rgb(143, 143, 143);
-    text-decoration: none;
-    cursor: default;
-    font-weight: 500;
-  }
+.dark-theme > .page-wrapper > .app-container {
+  background-color: #3c3c3c;
+  color: #d6d6d6;
+}
 
-  #celsius-link:not(.active),
-  #fahrenheit-link:not(.active) {
-    color: #ffffff;
-    font-weight: 600;
-  }
+.dark-theme > .page-wrapper > .app-container #search-input {
+  background-color: #d6d6d6;
+  border: 1px solid #4a4a4a;
+}
+.dark-theme > .page-wrapper > .app-container .submit {
+  background-color: #d6d6d6;
+  border: 1px solid #4a4a4a;
+}
+
+.dark-theme > .page-wrapper > .app-container #celsius-link.active,
+.dark-theme > .page-wrapper > .app-container #fahrenheit-link.active {
+  color: #d6d6d6;
+}
+
+.dark-theme > .page-wrapper > .app-container #celsius-link:not(.active),
+.dark-theme > .page-wrapper > .app-container #fahrenheit-link:not(.active) {
+  color: #ffffff;
 }
 
 /* Form & About styles */
