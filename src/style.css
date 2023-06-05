@@ -248,11 +248,9 @@ p.powered-by {
 }
 
 /* Creative Theme */
-.creative-theme {
-  .app-container {
-    background-color: var(--creative-theme-color1);
-    color: #ffffff; /* Adjust the text color as needed */
-  }
+.creative-theme .app-container {
+  background-color: var(--creative-theme-color1);
+  color: #ffffff; /* Adjust the text color as needed */
 }
 
 /* Dark Theme */
