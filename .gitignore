@@ -1,0 +1,19 @@
+# OS-filer
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+
+# Temporära filer
+*.log
+*.tmp
+
+# Eventuella testfiler
+*.bak
+
+# Miljövariabler och beroenden
+.env
+.netlify
+node_modules
